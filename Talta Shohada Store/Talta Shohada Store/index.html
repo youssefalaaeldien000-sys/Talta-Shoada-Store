@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talta Shohada Store</title>
+    <!-- ربط ملف التصميم CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- الشريط العلوي (Navbar) -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div id="open-cart" class="floating-cart">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- الواجهة الترحيبية (Hero Section) -->
+    <section id="home" class="hero">
+    </section>
+
+    <!-- زرار اشتري الآن تحت البانر -->
+    <div class="shop-btn-container">
+        <a href="#products" class="btn-shop">Buy Now</a>
+    </div>
+
+    <!-- قسم المربعات الرئيسية اللي بتظهر في الأول -->
+    <section id="categories-home" class="products">
+        <h2>ITEMS</h2>
+        <div class="category-boxes-grid">
+            
+            <!-- مربع الكابات -->
+            <div class="category-box" onclick="showSection('caps-section')">
+                <img src="Background caps.jpeg" alt="الكابات">
+                <div class="category-overlay">
+                    <h3>Caps</h3>
+                </div>
+            </div>
+
+            <!-- مربع البراويز -->
+            <div class="category-box" onclick="showSection('frames-section')">
+                <img src="Background framed.jpeg" alt="البراويز">
+                <div class="category-overlay">
+                    <h3>Frames</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 1. قسم الكابات -->
+    <section id="caps-section" class="product-section" style="display: none;">
+        <div class="section-header">
+            <h2>Available caps</h2>
+            <button class="back-btn" onclick="showMainCategories()">Back</button>
+        </div>
+        <div class="product-grid">
+           <div class="product-card">
+                <img src="cab 74 black.jpeg" alt="كاب 74 اسود">
+                <h3>كاب 74</h3>
+                <p class="price">220 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cab red 2.jpeg" alt="كاب احمر">
+                <h3>كاب احمر</h3>
+                <p class="price">165 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cab red.jpeg" alt="كاب احمر">
+                <h3>كاب احمر في اسود</h3>
+                <p class="price">165 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cab black 2.jpeg" alt="كاب اسود">
+                <h3>كاب اسود</h3>
+                <p class="price">165 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cab black.jpeg" alt="كاب اسود">
+                <h3>كاب اسود في احمر</h3>
+                <p class="price">165 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cap6.jpeg" alt="كاب">
+                <h3>كاب جمهور مانع السكات احمر</h3>
+                <p class="price">200 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cap7.jpeg" alt="كاب">
+                <h3>كاب جمهور مانع السكات اسود</h3>
+                <p class="price">200 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cap8.jpeg" alt="كاب">
+                <h3>كاب مصنع الرجال اسود</h3>
+                <p class="price">200 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cap9.jpeg" alt="كاب">
+                <h3>STONE ISLAND</h3>
+                <p class="price">200 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cap10.jpeg" alt="كاب">
+                <h3>كاب 1907</h3>
+                <p class="price">185 $</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+       </div>      
+    </section>
+
+    <!-- 2. قسم البراويز -->
+    <section id="frames-section" class="product-section" style="display: none;">
+        <div class="section-header">
+            <h2>Available frames</h2>
+            <button class="back-btn" onclick="showMainCategories()">Back</button>
+        </div>
+        <div class="product-grid">
+
+          
+              <div class="product-card">
+    <img src="frame1.jpeg" alt="برواز تالتة شهداء">
+    <h3>Aboutrika</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame2.jpeg" alt="برواز تالتة شهداء">
+    <h3>Africa</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame3.jpeg" alt="برواز تالتة شهداء">
+    <h3>Legends</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame4.jpeg" alt="برواز تالتة شهداء">
+    <h3>UA</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame5.jpeg" alt="برواز تالتة شهداء">
+    <h3>اهلاوي</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame6.jpeg" alt="برواز تالتة شهداء">
+    <h3>الكابو</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ 
+ <div class="product-card">
+    <img src="frame7.jpeg" alt="برواز تالتة شهداء">
+    <h3>UA & UGC</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame8.jpeg" alt="برواز تالتة شهداء">
+    <h3>85:45</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ 
+ 
+ <div class="product-card">
+    <img src="frame9.jpeg" alt="برواز تالتة شهداء">
+    <h3>AMR FAHMY (R)</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame10.jpeg" alt="برواز تالتة شهداء">
+    <h3>AMR FAHMY (B)</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame11.jpeg" alt="برواز تالتة شهداء">
+    <h3>التالتة شمال</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame12.jpeg" alt="برواز تالتة شهداء">
+    <h3>NEVER FORGET</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame13.jpeg" alt="برواز تالتة شهداء">
+    <h3>74</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame14.jpeg" alt="برواز تالتة شهداء">
+    <h3>نادي الاهلي</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame15.jpeg" alt="برواز تالتة شهداء">
+    <h3>اقتحام اهلاوي</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+ <div class="product-card">
+    <img src="frame16.jpeg" alt="برواز تالتة شهداء">
+    <h3>الماجيكو</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+       <div class="product-card">
+    <img src="frame17.jpeg" alt="برواز تالتة شهداء">
+    <h3>UA07</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+<div class="product-card">
+    <img src="frame18.jpeg" alt="برواز تالتة شهداء">
+    <h3>ماجيكو 22</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ 
+<div class="product-card">
+    <img src="frame19.jpeg" alt="برواز تالتة شهداء">
+    <h3>الاهلى 🧨</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ <div class="product-card">
+    <img src="frame20.jpeg" alt="برواز تالتة شهداء">
+    <h3>نجم الجيل</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ <div class="product-card">
+    <img src="frame21.jpeg" alt="برواز تالتة شهداء">
+    <h3>اهلاوى 
+NEVER FORGET</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ <div class="product-card">
+    <img src="frame22.jpeg" alt="برواز تالتة شهداء">
+    <h3>اهلاوى فى المغرب 🧨</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ <div class="product-card">
+    <img src="frame23.jpeg" alt="برواز تالتة شهداء">
+    <h3>معلول</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart">Add to cart</button>
+</div>
+ <div class="product-card">
+    <img src="frame24.jpeg" alt="برواز تالتة شهداء">
+    <h3>هي دي حياتنا</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+      <button class="add-to-cart">Add to cart</button>      
+        </div>
+
+
+        <div class="product-card">
+    <img src="frame25.jpeg" alt="برواز تالتة شهداء">
+    <h3>من تنفيذك</h3>
+    
+    <!-- خيارات المقاسات بالأسعار المحددة -->
+    <div class="sizes-container" style="margin: 12px 0; text-align: center;">
+        <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 8px; font-size: 14px;">اختر المقاس:</p>
+        
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="20x30" checked style="margin-left: 5px;"> 
+                مقاس 20×30
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">230 ج.م</span>
+        </div>
+
+        <div class="size-option" style="background: #252525; padding: 8px; margin: 6px 0; border-radius: 6px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;">
+            <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                <input type="radio" name="size-group-1" value="30x40" style="margin-left: 5px;"> 
+                مقاس 30×40
+            </label>
+            <span class="price" style="color: #4cd137; font-weight: bold; font-size: 13px;">250 ج.م</span>
+        </div>
+      <button class="add-to-cart">Add to cart</button>      
+        </div>
+
+
+        </div>
+    </section>
+
+    <!-- الفوتر (Footer) -->
+    <footer id="contact">
+        <p>By Youssef Alaa </p>
+        <p>للتواصل 01153752415 </p>
+    </footer>
+
+    <!-- نافذة السلة المنبثقة -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>🛒 سلة المشتريات</h2>
+            <ul id="cart-items"></ul>
+
+            <!-- خانات بيانات العميل (الاسم ورقم الهاتف) -->
+            <div style="margin: 15px 0; text-align: right;">
+                <div style="margin-bottom: 10px;">
+                    <label style="color: #fff; font-size: 13px; display: block; margin-bottom: 3px;">اسم العميل:</label>
+                    <input type="text" id="customer-name" placeholder="اكتب اسمك كامل..." oninput="updateTotalWithShipping()" style="width: 100%; padding: 8px; border-radius: 5px; background: #222; color: #fff; border: 1px solid #444; font-size: 13px;">
+                </div>
+                <div>
+                    <label style="color: #fff; font-size: 13px; display: block; margin-bottom: 3px;">رقم الهاتف (للتواصل):</label>
+                    <input type="tel" id="customer-phone" placeholder="اكتب رقم الموبايل..." oninput="updateTotalWithShipping()" style="width: 100%; padding: 8px; border-radius: 5px; background: #222; color: #fff; border: 1px solid #444; font-size: 13px;">
+                </div>
+            </div>
+            
+            <div class="shipping-container" style="margin: 15px 0; text-align: right;">
+                <label for="governorate" style="color: #fff; font-size: 14px; display: block; margin-bottom: 5px;">اختر المحافظة للشحن:</label>
+                <select id="governorate" onchange="updateTotalWithShipping()" style="width: 100%; padding: 8px; border-radius: 5px; background: #222; color: #fff; border: 1px solid #444;">
+                    <option value="">-- اختار المحافظة --</option>
+                    <option value="sharkia">الشرقية</option>
+                    <option value="cairo">القاهرة</option>
+                    <option value="giza">الجيزة</option>
+                    <option value="qalyubia">القليوبية</option>
+                    <option value="menofia">المنوفية</option>
+                    <option value="gharbia">الغربية</option>
+                    <option value="alex">الإسكندرية</option>
+                    <option value="kafr_sheikh">كفر الشيخ</option>
+                    <option value="beheira">البحيرة</option>
+                    <option value="damietta">دمياط</option>
+                    <option value="dakahlia">الدقهلية</option>
+                    <option value="fayoum">الفيوم</option>
+                    <option value="ismailia">الإسماعيلية</option>
+                    <option value="portsaid">بورسعيد</option>
+                    <option value="suez">السويس</option>
+                    <option value="beni_suef">بني سويف</option>
+                    <option value="minya">المنيا</option>
+                    <option value="assiut">أسيوط</option>
+                    <option value="sohag">سوهاج</option>
+                    <option value="qena">قنا</option>
+                    <option value="luxor">الأقصر</option>
+                    <option value="aswan">أسوان</option>
+                    <option value="redsea">البحر الاحمر</option>
+                    <option value="north_sinai">شمال سيناء</option>
+                    <option value="south_sinai">جنوب سيناء</option>
+                    <option value="new_valley">الوادى الجديد</option>
+                    <option value="matrouh">مطروح</option>
+                </select>
+            </div>   
+
+            <!-- اختيار طريقة التوصيل -->
+            <div id="delivery-section" style="margin: 15px 0; text-align: right; display: none;">
+                <label style="color: #fff; font-size: 14px; display: block; margin-bottom: 8px;">طريقة الاستلام:</label>
+                <div style="display: flex; gap: 15px; margin-bottom: 10px;">
+                    <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                        <input type="radio" name="deliveryMethod" value="باب البيت" checked onchange="updateTotalWithShipping()"> لحد باب البيت
+                    </label>
+                    <label style="color: #fff; font-size: 13px; cursor: pointer;">
+                        <input type="radio" name="deliveryMethod" value="مكتب بريد" onchange="updateTotalWithShipping()"> لأقرب مكتب بريد
+                    </label>
+                </div>
+
+                <!-- خانة عنوان البيت -->
+                <div id="home-address-container">
+                    <input type="text" id="home-address" placeholder="اكتب العنوان بالتفصيل (الشارع، الدور، الحارة...)" oninput="updateTotalWithShipping()" style="width: 100%; padding: 8px; border-radius: 5px; background: #222; color: #fff; border: 1px solid #444; font-size: 13px;">
+                </div>
+
+                <!-- خانة مكتب البريد -->
+                <div id="post-office-container" style="display: none;">
+                    <input type="text" id="post-office-name" placeholder="اكتب اسم أو عنوان أقرب مكتب بريد..." oninput="updateTotalWithShipping()" style="width: 100%; padding: 8px; border-radius: 5px; background: #222; color: #fff; border: 1px solid #444; font-size: 13px;">
+                </div>
+            </div>
+           
+            <p class="total-price" style="margin: 15px 0; font-weight: bold;">الإجمالي: 0 جنيه</p>
+            <button id="checkout-btn" disabled style="opacity: 0.6; cursor: not-allowed;" onclick="validateCheckout()">إتمام الطلب عبر واتساب</button>
+        </div>
+    </div>
+
+    <script>
+        const openCartBtn = document.getElementById('open-cart');
+        const cartModal = document.getElementById('cart-modal');
+        const closeBtn = document.querySelector('.close-btn');
+        const cartItemsList = document.getElementById('cart-items');
+        const cartCountSpan = document.getElementById('cart-count');
+
+        let cart = [];
+
+        openCartBtn.addEventListener('click', () => { cartModal.style.display = 'flex'; });
+        closeBtn.addEventListener('click', () => { cartModal.style.display = 'none'; });
+        window.addEventListener('click', (e) => { if (e.target === cartModal) cartModal.style.display = 'none'; });
+
+        // إضافة المنتجات للسلة
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.product-card');
+                const baseName = card.querySelector('h3').textContent || "منتج";
+                const hasSizes = card.querySelector('input[type="radio"]');
+                
+                let finalItemName = baseName;
+                let productPrice = 0;
+                
+                if (hasSizes) {
+                    const selectedRadio = card.querySelector('input[type="radio"]:checked');
+                    if (!selectedRadio) {
+                        alert('من فضلك اختر المقاس أولاً!');
+                        return;
+                    }
+                    const selectedSize = selectedRadio.value;
+                    const priceElement = selectedRadio.closest('.size-option').querySelector('.price');
+                    productPrice = parseFloat(priceElement.textContent);
+                    finalItemName = `${baseName} - برواز (مقاس ${selectedSize})`;
+                } else {
+                    const priceElement = card.querySelector('.price');
+                    productPrice = parseFloat(priceElement.textContent);
+                    finalItemName = `${baseName} - كاب`;
+                }
+                
+                const existingItem = cart.find(item => item.name === finalItemName);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({ name: finalItemName, price: productPrice, quantity: 1 });
+                }
+
+                updateCartUI();
+                alert('تم إتمام إضافة المنتج بنجاح! 🛒❤️');
+            });
+        });
+
+        function updateCartUI() {
+            cartItemsList.innerHTML = '';
+            let productsTotal = 0;
+
+            cart.forEach((item, index) => {
+                let itemTotal = item.price * item.quantity;
+                productsTotal += itemTotal;
+
+                const cartItemDiv = document.createElement('div');
+                // تصميم فخم وحديث لعنصر السلة مع أزرار زيادة ونقصان متناسقة
+                cartItemDiv.style.cssText = "display: flex; justify-content: space-between; align-items: center; background: #222222; padding: 10px 12px; margin: 8px 0; border-radius: 8px; border: 1px solid #333; color: #fff;";
+
+                cartItemDiv.innerHTML = `
+                    <div style="text-align: right; max-width: 60%;">
+                        <div style="font-weight: bold; font-size: 13px; margin-bottom: 3px; color: #fff;">${item.name}</div>
+                        <div style="color: #4cd137; font-size: 12px; font-weight: bold;">${itemTotal} ج.م</div>
+                    </div>
+                    <div style="display: flex; align-items: center; background: #181818; border: 1px solid #444; border-radius: 6px; padding: 2px;">
+                        <button onclick="decreaseQty(${index})" style="background: #a6192e; color: #fff; border: none; width: 26px; height: 26px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">-</button>
+                        <span style="font-weight: bold; min-width: 25px; text-align: center; color: #fff; font-size: 13px;">${item.quantity}</span>
+                        <button onclick="increaseQty(${index})" style="background: #a6192e; color: #fff; border: none; width: 26px; height: 26px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">+</button>
+                    </div>
+                `;
+                cartItemsList.appendChild(cartItemDiv);
+            });
+
+            let totalItemsCount = 0;
+            cart.forEach(item => { totalItemsCount += item.quantity; });
+            if (cartCountSpan) cartCountSpan.innerText = totalItemsCount;
+
+            updateTotalWithShipping();
+        }
+
+        function increaseQty(index) {
+            cart[index].quantity += 1;
+            updateCartUI();
+        }
+
+        function decreaseQty(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity -= 1;
+            } else {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function getShippingDetails() {
+            const gov = document.getElementById('governorate').value;
+            const method = document.querySelector('input[name="deliveryMethod"]:checked').value;
+
+            const rates = {
+                'sharkia':     { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'cairo':       { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'giza':        { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'qalyubia':    { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'menofia':     { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'gharbia':     { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'alex':        { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'kafr_sheikh': { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'beheira':     { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'damietta':    { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'dakahlia':    { 'باب البيت': { cost: 80, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                
+                'fayoum':      { 'باب البيت': { cost: 110, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'beni_suef':   { 'باب البيت': { cost: 110, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'minya':       { 'باب البيت': { cost: 110, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+
+                'ismailia':    { 'باب البيت': { cost: 95, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'portsaid':    { 'باب البيت': { cost: 95, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+                'suez':        { 'باب البيت': { cost: 95, time: 'يومين' }, 'مكتب بريد': { cost: 65, time: 'يومين' } },
+
+                'assiut':      { 'باب البيت': { cost: 125, time: '3 أيام' }, 'مكتب بريد': { cost: 65, time: '3 أيام' } },
+                'sohag':       { 'باب البيت': { cost: 125, time: '3 أيام' }, 'مكتب بريد': { cost: 65, time: '3 أيام' } },
+                'qena':        { 'باب البيت': { cost: 125, time: '3 أيام' }, 'مكتب بريد': { cost: 65, time: '3 أيام' } },
+                'luxor':       { 'باب البيت': { cost: 125, time: '3 أيام' }, 'مكتب بريد': { cost: 65, time: '3 أيام' } },
+                'aswan':       { 'باب البيت': { cost: 125, time: '3 أيام' }, 'مكتب بريد': { cost: 65, time: '3 أيام' } },
+                'redsea':      { 'باب البيت': { cost: 125, time: '3 أيام' }, 'مكتب بريد': { cost: 65, time: '3 أيام' } },
+
+                'north_sinai': { 'باب البيت': { cost: 135, time: '4 أيام' }, 'مكتب بريد': { cost: 65, time: '4 أيام' } },
+                'south_sinai': { 'باب البيت': { cost: 135, time: '4 أيام' }, 'مكتب بريد': { cost: 65, time: '4 أيام' } },
+                'new_valley':  { 'باب البيت': { cost: 135, time: '4 أيام' }, 'مكتب بريد': { cost: 65, time: '4 أيام' } },
+                'matrouh':     { 'باب البيت': { cost: 135, time: '4 أيام' }, 'مكتب بريد': { cost: 65, time: '4 أيام' } }
+            };
+
+            if (rates[gov] && rates[gov][method]) {
+                return rates[gov][method];
+            }
+            return { cost: 80, time: 'يومين' };
+        }
+
+        function updateTotalWithShipping() {
+            let productsTotal = 0;
+            cart.forEach(item => { productsTotal += (item.price * item.quantity); });
+
+            const customerName = document.getElementById('customer-name').value.trim();
+            const customerPhone = document.getElementById('customer-phone').value.trim();
+            const govSelect = document.getElementById('governorate');
+            const deliverySection = document.getElementById('delivery-section');
+            const checkoutBtn = document.getElementById('checkout-btn');
+
+            if (govSelect && govSelect.value !== "") {
+                deliverySection.style.display = 'block';
+            } else {
+                deliverySection.style.display = 'none';
+            }
+
+            toggleDeliveryInputs();
+
+            let shippingInfo = getShippingDetails();
+            let finalTotal = productsTotal + (govSelect.value !== "" ? shippingInfo.cost : 0);
+
+            const totalPriceEl = document.querySelector('.total-price');
+            if (totalPriceEl) {
+                if (productsTotal > 0 && govSelect.value !== "") {
+                    totalPriceEl.innerText = `الإجمالي: ${productsTotal} + شحن ${shippingInfo.cost} (${shippingInfo.time}) = ${finalTotal} جنيه`;
+                } else {
+                    totalPriceEl.innerText = `الإجمالي: ${productsTotal} جنيه`;
+                }
+            }
+
+            let method = document.querySelector('input[name="deliveryMethod"]:checked').value;
+            let addressVal = method === 'باب البيت' ? document.getElementById('home-address').value.trim() : document.getElementById('post-office-name').value.trim();
+
+            if (customerName !== "" && customerPhone !== "" && govSelect.value !== "" && addressVal !== "" && cart.length > 0) {
+                checkoutBtn.disabled = false;
+                checkoutBtn.style.opacity = "1";
+                checkoutBtn.style.cursor = "pointer";
+            } else {
+                checkoutBtn.disabled = true;
+                checkoutBtn.style.opacity = "0.6";
+                checkoutBtn.style.cursor = "not-allowed";
+            }
+        }
+
+        function toggleDeliveryInputs() {
+            const method = document.querySelector('input[name="deliveryMethod"]:checked').value;
+            const homeContainer = document.getElementById('home-address-container');
+            const postContainer = document.getElementById('post-office-container');
+
+            if (method === 'باب البيت') {
+                homeContainer.style.display = 'block';
+                postContainer.style.display = 'none';
+            } else {
+                homeContainer.style.display = 'none';
+                postContainer.style.display = 'block';
+            }
+        }
+
+        function validateCheckout() {
+            const customerName = document.getElementById('customer-name').value.trim();
+            const customerPhone = document.getElementById('customer-phone').value.trim();
+            const govSelect = document.getElementById('governorate');
+            
+            if (!customerName) {
+                alert("من فضلك اكتب اسم العميل!");
+                document.getElementById('customer-name').focus();
+                return;
+            }
+
+            if (!customerPhone) {
+                alert("من فضلك اكتب رقم الهاتف!");
+                document.getElementById('customer-phone').focus();
+                return;
+            }
+
+            if (!govSelect || govSelect.value === "") {
+                alert("من فضلك اختر المحافظة أولاً!");
+                govSelect.focus();
+                return; 
+            }
+            
+            if (typeof cart === 'undefined' || cart.length === 0) {
+                alert("سلة المشتريات فارغة!");
+                return;
+            }
+
+            const deliveryMethod = document.querySelector('input[name="deliveryMethod"]:checked').value;
+            let deliveryDetails = "";
+
+            if (deliveryMethod === 'باب البيت') {
+                deliveryDetails = document.getElementById('home-address').value.trim();
+                if (!deliveryDetails) {
+                    alert("من فضلك اكتب عنوان الاستلام بالتفصيل لحد باب البيت!");
+                    document.getElementById('home-address').focus();
+                    return;
+                }
+            } else {
+                deliveryDetails = document.getElementById('post-office-name').value.trim();
+                if (!deliveryDetails) {
+                    alert("من فضلك اكتب اسم أو عنوان أقرب مكتب بريد!");
+                    document.getElementById('post-office-name').focus();
+                    return;
+                }
+            }
+
+            let message = "🛒 طلب جديد:%0A";
+            message += `👤 اسم العميل: ${customerName}%0A`;
+            message += `📞 رقم الهاتف: ${customerPhone}%0A%0A`;
+            
+            let productsTotal = 0;
+            cart.forEach(item => {
+                message += `- ${item.name} (الكمية: ${item.quantity}) - ${item.price * item.quantity} جنيه%0A`;
+                productsTotal += (item.price * item.quantity);
+            });
+
+            let shippingInfo = getShippingDetails();
+            let finalTotal = productsTotal + shippingInfo.cost;
+            let selectedGovText = govSelect.options[govSelect.selectedIndex].text;
+
+            message += `%0A📍 المحافظة: ${selectedGovText}`;
+            message += `%0A🚚 طريقة الاستلام: ${deliveryMethod}`;
+            message += `%0A📝 تفاصيل العنوان: ${deliveryDetails}`;
+            message += `%0A⏱️ مدة التوصيل: خلال ${shippingInfo.time}`;
+            message += `%0A💰 إجمالي المنتجات: ${productsTotal} جنيه`;
+            message += `%0A📦 الشحن: ${shippingInfo.cost} جنيه`;
+            message += `%0A✨ الإجمالي النهائي: ${finalTotal} جنيه`;
+
+            let phoneNum = "201039574101"; 
+            window.open(`https://wa.me/${phoneNum}?text=${message}`, '_blank');
+        }
+
+        function showSection(sectionId) {
+            document.getElementById('categories-home').style.display = 'none';
+            document.getElementById('caps-section').style.display = 'none';
+            document.getElementById('frames-section').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+            window.scrollTo({ top: 500, behavior: 'smooth' });
+        }
+
+        function showMainCategories() {
+            document.getElementById('caps-section').style.display = 'none';
+            document.getElementById('frames-section').style.display = 'none';
+            document.getElementById('categories-home').style.display = 'block';
+            window.scrollTo({ top: 500, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
